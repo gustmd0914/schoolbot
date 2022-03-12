@@ -17,7 +17,10 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.content.startswith("1반"):
-        await message.channel.send("?")
+        await message.channel.send("ㅇㅇ")
+    
+    if message.content.startswith("뭐해"):
+        await message.channel.send("니생각")
 
     if message.content.startswith("사진"):
         pic = message.content.split(" ")[1]
