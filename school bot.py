@@ -1,4 +1,6 @@
 import discord
+import os
+
 
 client = discord.Client()
 
@@ -20,8 +22,10 @@ async def on_message(message):
     if message.content.startswith("사진"):
         pic = message.content.split(" ")[1]
         await message.channel.send(file=discord.File(pic))
-
-client.run("OTUxNzMxNDA5ODUxMTI5OTA2.Yiru8g.imAkRdqq8XZEooeXJ_YVHeaaIeM")
+        
+        
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
 
 
 
